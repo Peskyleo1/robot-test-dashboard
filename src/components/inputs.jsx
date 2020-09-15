@@ -1,5 +1,6 @@
 import React from 'react';
 import Map from './map.jsx';
+import Data from '../assets/data/coordinates.json';
 
 export default () => {
     
@@ -8,9 +9,9 @@ export default () => {
             <div style={{width: '100%'}}>
                 <h2>POSITION</h2>
                 <p>x: </p>
-                <input value={Map.posX}></input>
+                <input value={Data.x}></input>
                 <p>y: </p>
-                <input value={Map.posY}></input>
+                <input value={Data.y}></input>
                 <h2>ROTATION</h2>
                 <p>deg:</p>
                 <input></input>
