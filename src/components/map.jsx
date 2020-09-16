@@ -10,7 +10,13 @@ let Coordinates = {
 
 
 
-export default () => {
+export default (props) => {
+
+    const [inputValue, setInputValue] = React.useState('');
+
+    function onChange() {
+        //setInputValue(event.target.value);
+    }
 
     return (
         <div className="MapContainer">
@@ -21,7 +27,8 @@ export default () => {
                         //alert("x: " + posX + "\ny: " + posY);
                         Data.x = posX;
                         Data.y = posY;
-                        alert("x: " + Data.x + "\ny: " + Data.y);
+                        props.onSubmit([posX, posY]);
+                        //alert("x: " + Data.x + "\ny: " + Data.y);
                         return {x: posX, y: posY};
                     }
 

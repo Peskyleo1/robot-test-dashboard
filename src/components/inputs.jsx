@@ -2,8 +2,10 @@ import React from 'react';
 import Map from './map.jsx';
 import Data from '../assets/data/coordinates.json';
 
-export default () => {
+export default (props) => {
     
+    const {data} = props;
+
     return (
         <div className="inputs">
             <div style={{width: '100%'}}>
