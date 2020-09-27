@@ -8,7 +8,7 @@ export default () => {
 
     function onSubmit(formState) {
         setCoordinates(formState);
-        alert('Data: ' + formState);
+        //alert('Data: ' + formState);
     }
     return (
         <div className="MapTool">

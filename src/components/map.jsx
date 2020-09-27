@@ -12,6 +12,17 @@ let Coordinates = {
 
 export default (props) => {
 
+    const y = Data.y;
+    const x = Data.x;
+
+    const divStyle = {
+                backgroundColor: "red",
+                width: "10px",
+                height: "10px",
+                position: "absolute",
+                top: y+"px",
+                left: x+"px"
+    }
     const [inputValue, setInputValue] = React.useState('');
 
     function onChange() {
@@ -19,6 +30,7 @@ export default (props) => {
     }
 
     return (
+        
         <div className="MapContainer">
                 <img src={image} ismap onClick={
                     function getImageCoords(e, img) {
@@ -33,7 +45,7 @@ export default (props) => {
                     }
 
                     //{(e) => console.log(e.clientY - e.target.offsetTop) + console.log(e.clientX - e.target.offsetLeft)}
-                }></img>
+                }></img><div style={divStyle}></div>
         </div>
     )
 }
