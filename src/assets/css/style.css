@@ -1,9 +1,13 @@
+body {
+    background-color: rgb(17, 35, 82);
+}
+
 .MapSection {
     position: relative;
     width: 100%;
     background-color: rgb(17, 35, 82);
     height: 700px;
-    margin-top: 0px;
+    margin-top: 170px;
 }
 
 .MapContainer {
