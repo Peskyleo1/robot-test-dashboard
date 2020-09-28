@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import image from '../assets/img/map.PNG';
+import navIcon from '../assets/img/nav.png';
 import Data from '../assets/data/coordinates.json';
 
 let Coordinates = {
@@ -16,12 +17,11 @@ export default (props) => {
     const x = Data.x;
 
     const divStyle = {
-                backgroundColor: "red",
-                width: "10px",
-                height: "10px",
+                width: "30px",
+                height: "30px",
                 position: "absolute",
-                top: y-5+"px",
-                left: x-5+"px",
+                top: y-15+"px",
+                left: x-15+"px",
                 transform: "rotate("+Data.rotation+"deg)"
     }
     const [inputValue, setInputValue] = React.useState('');
@@ -46,7 +46,7 @@ export default (props) => {
                     }
 
                     //{(e) => console.log(e.clientY - e.target.offsetTop) + console.log(e.clientX - e.target.offsetLeft)}
-                }></img><div style={divStyle}></div>
+                }></img><img src={navIcon} style={divStyle}></img>
         </div>
     )
 }
