@@ -20,8 +20,9 @@ export default (props) => {
                 width: "10px",
                 height: "10px",
                 position: "absolute",
-                top: y+"px",
-                left: x+"px"
+                top: y-5+"px",
+                left: x-5+"px",
+                transform: "rotate("+Data.rotation+"deg)"
     }
     const [inputValue, setInputValue] = React.useState('');
 
